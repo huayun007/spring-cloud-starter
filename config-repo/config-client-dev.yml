@@ -11,4 +11,4 @@ eureka:
   instance:
     prefer-ip-address: true
 hello:
-  man: huayun007
+  man: huayun001
