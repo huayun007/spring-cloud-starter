@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: order
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: config
+      profile: test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: order
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 20 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 50 # 如果现在超过了50秒的间隔（默认是90秒）
